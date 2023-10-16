@@ -31,7 +31,7 @@ app.get('/api',(req,res)=>{
 // your first API endpoint... 
 app.get("/api/:date", (req, res) => {
   const date = req.params.date;
-  let timestamp;
+  let timestamp = {};
   const unixCheck = date * 1;
   let newDate = isNaN(unixCheck) ? new Date(date) : new Date(unixCheck);
   if (!isNaN(newDate.getTime())) {
