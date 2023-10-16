@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
 
 app.get('/api',(req,res)=>{
   let timestamp = getTimestamp(new Date());
-  res.end(JSON.stringify(timestamp));
+  res.json(timestamp);
 });
 
 const getTimestamp = date => ({
@@ -28,7 +28,7 @@ const getTimestamp = date => ({
 });
 
 // your first API endpoint... 
-app.get("/api/:date", (req, res) => {
+app.get("/api/:date?", (req, res) => {
   const date = req.params.date;
   console.log(date);
   let timestamp = {};
@@ -39,11 +39,11 @@ app.get("/api/:date", (req, res) => {
     timestamp = getTimestamp(newDate);
     console.log(timestamp);
   } else {
-    timestamp = { error: "invalid date" };
+    timestamp = { error: "invalid Date" };
 
   }
 
-  res.end(JSON.stringify(timestamp));
+  res.json(timestamp);
 });
 
 
