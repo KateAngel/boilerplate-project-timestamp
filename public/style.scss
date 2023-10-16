@@ -1,0 +1,53 @@
+/****** Main Styling ******/
+$bg-color-main: #222;
+
+
+body {
+	display: flex;
+	flex-direction: column; 
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: ivory;
+	background-color: $bg-color-main;
+	text-align: center;
+	line-height: 1.4em;
+	align-items: center;
+}
+
+.container {
+	padding: 20px;
+	margin-top: 40px;
+	background-color: lighten($bg-color-main, 5%);
+}
+
+h3 {
+ 	 margin-top: 20px;
+}
+
+hr {
+	margin: 25px;
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+code {
+	font-family: monospace;
+	padding: 2px;
+	color: #fff;
+	background-color: black;
+}
+
+ul {
+    list-style-type: none;
+	padding: 0;
+}
+
+li {
+  	margin-bottom: 0.5em;
+}
+
+a {
+	color: gold;
+}
